@@ -41,6 +41,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D856639529F84CED003261A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D856639629F84D09003261A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D88C4E8129F7002F00AC4A14 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D856639729F84D1F003261A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D88C4E7F29F7002F00AC4A14 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D856639829F84D41003261A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D88C4E7B29F7002F00AC4A14 /* AppDelegate.swift */,
+				D88C4E7D29F7002F00AC4A14 /* SceneDelegate.swift */,
+				D88C4E8629F7003000AC4A14 /* LaunchScreen.storyboard */,
+				D88C4E8429F7003000AC4A14 /* Assets.xcassets */,
+				D83D93EF29F7BD4A00CF8E13 /* Delm-Medium.otf */,
+				D83D93F129F7BD5A00CF8E13 /* ThirstySoftRegular.otf */,
+				D88C4E8929F7003000AC4A14 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D88C4E6F29F7002F00AC4A14 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +97,10 @@
 		D88C4E7A29F7002F00AC4A14 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				D88C4E7B29F7002F00AC4A14 /* AppDelegate.swift */,
-				D88C4E7D29F7002F00AC4A14 /* SceneDelegate.swift */,
-				D88C4E7F29F7002F00AC4A14 /* ViewController.swift */,
-				D88C4E8129F7002F00AC4A14 /* Main.storyboard */,
-				D83D93EF29F7BD4A00CF8E13 /* Delm-Medium.otf */,
-				D83D93F129F7BD5A00CF8E13 /* ThirstySoftRegular.otf */,
-				D88C4E8429F7003000AC4A14 /* Assets.xcassets */,
-				D88C4E8629F7003000AC4A14 /* LaunchScreen.storyboard */,
-				D88C4E8929F7003000AC4A14 /* Info.plist */,
+				D856639529F84CED003261A8 /* Model */,
+				D856639629F84D09003261A8 /* View */,
+				D856639729F84D1F003261A8 /* Controller */,
+				D856639829F84D41003261A8 /* Supporting Files */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -296,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
