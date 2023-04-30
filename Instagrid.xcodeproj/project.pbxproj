@@ -10,7 +10,6 @@
 		D83D93F029F7BD4A00CF8E13 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D83D93EF29F7BD4A00CF8E13 /* Delm-Medium.otf */; };
 		D83D93F229F7BD5A00CF8E13 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D83D93F129F7BD5A00CF8E13 /* ThirstySoftRegular.otf */; };
 		D88C4E7C29F7002F00AC4A14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C4E7B29F7002F00AC4A14 /* AppDelegate.swift */; };
-		D88C4E7E29F7002F00AC4A14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C4E7D29F7002F00AC4A14 /* SceneDelegate.swift */; };
 		D88C4E8029F7002F00AC4A14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88C4E7F29F7002F00AC4A14 /* ViewController.swift */; };
 		D88C4E8329F7002F00AC4A14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88C4E8129F7002F00AC4A14 /* Main.storyboard */; };
 		D88C4E8529F7003000AC4A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88C4E8429F7003000AC4A14 /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 		D83D93F129F7BD5A00CF8E13 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		D88C4E7829F7002F00AC4A14 /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88C4E7B29F7002F00AC4A14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D88C4E7D29F7002F00AC4A14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D88C4E7F29F7002F00AC4A14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D88C4E8229F7002F00AC4A14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D88C4E8429F7003000AC4A14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				D88C4E7B29F7002F00AC4A14 /* AppDelegate.swift */,
-				D88C4E7D29F7002F00AC4A14 /* SceneDelegate.swift */,
 				D88C4E8629F7003000AC4A14 /* LaunchScreen.storyboard */,
 				D88C4E8429F7003000AC4A14 /* Assets.xcassets */,
 				D83D93EF29F7BD4A00CF8E13 /* Delm-Medium.otf */,
@@ -180,7 +177,6 @@
 			files = (
 				D88C4E8029F7002F00AC4A14 /* ViewController.swift in Sources */,
 				D88C4E7C29F7002F00AC4A14 /* AppDelegate.swift in Sources */,
-				D88C4E7E29F7002F00AC4A14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +321,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +332,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,7 +342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -355,8 +354,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -364,6 +365,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,7 +375,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
