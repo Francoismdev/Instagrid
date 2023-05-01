@@ -2,10 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ThirstySoftRegular.otf">
+            <string>ThirstySoftRegular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -15,19 +21,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-vb-IjG">
-                                <rect key="frame" x="107.66666666666669" y="444.66666666666669" width="215" height="67.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a58-ZM-dVd">
+                                <rect key="frame" x="63" y="413" width="304" height="131"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="zLc-vb-IjG" secondAttribute="height" multiplier="83:26" id="Wzl-69-6cq"/>
+                                    <constraint firstAttribute="width" secondItem="a58-ZM-dVd" secondAttribute="height" multiplier="93:40" id="vXp-HQ-5I3"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.74117648599999997" green="0.8392156959" blue="0.89019608500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="zLc-vb-IjG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ILq-on-HS7"/>
-                            <constraint firstItem="zLc-vb-IjG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pxt-D4-Bme"/>
-                            <constraint firstItem="zLc-vb-IjG" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.5" id="YCJ-SS-5iR"/>
+                            <constraint firstItem="a58-ZM-dVd" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.706977" id="4Rs-B4-HLb"/>
+                            <constraint firstItem="a58-ZM-dVd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="WUv-UL-tYT"/>
+                            <constraint firstItem="a58-ZM-dVd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pix-RB-Rnh"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +45,4 @@
             <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Instagrid" width="41.333332061767578" height="13"/>
-    </resources>
 </document>
