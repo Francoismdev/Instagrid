@@ -7,6 +7,7 @@
       "size" : "20x20"
     },
     {
+      "filename" : "Icon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "scale" : "3x",
