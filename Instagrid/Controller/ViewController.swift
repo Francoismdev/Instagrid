@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomLeftView: UIView!
     @IBOutlet weak var bottomRightView: UIView!
     
+    
     @IBOutlet var layoutButtons: [UIButton]!
     
     @IBOutlet weak var select1: UIImageView!
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
         
         print("entier sélectionné: \(integers[sender.tag])")
     }
-
+    
     @IBAction func button1IsPressed(_ sender: Any) {
         print("button 1 IsPressed")
         // Changer le design de la vue principale
@@ -81,5 +82,27 @@ class ViewController: UIViewController {
         // Changer le design de la vue principale
         // Afficher l'image "Selected"
     }
+    
+    
+    @IBAction func bottomRightImage(_ sender: Any) {
+        print("image bas droite ou millieu IsPressed")
+    }
+    
+    
+    @IBAction func bottomLeftImage(_ sender: Any) {
+        print("image bas gauche IsPressed")
+    }
+    
+   
+    @IBAction func topRightImage(_ sender: Any) {
+        print("image haut Droite ou millieu IsPressed")
+    }
+    
+    
+    @IBAction func topLeftImage(_ sender: Any) {
+        print("image haut gauche IsPressed")
+        
+    }
+    
+    
 }
-
