@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // How to open photo gallery iPhone swift UIImagePickerController
     // let pickerController = UIImagePickerController()
@@ -88,20 +88,16 @@ class ViewController: UIViewController {
         print("image bas droite ou millieu IsPressed")
     }
     
-    
     @IBAction func bottomLeftImage(_ sender: Any) {
         print("image bas gauche IsPressed")
     }
     
-   
     @IBAction func topRightImage(_ sender: Any) {
         print("image haut Droite ou millieu IsPressed")
     }
     
-    
     @IBAction func topLeftImage(_ sender: Any) {
         print("image haut gauche IsPressed")
-        
     }
     
     
