@@ -85,9 +85,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o3c-4w-vzv">
                                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-zA-INz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="QWJ-tx-gn2">
                                                                 <rect key="frame" x="45" y="45" width="100" height="100"/>
                                                                 <constraints>
@@ -100,9 +97,12 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                                 <connections>
-                                                                    <action selector="topLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fy9-1g-5VW"/>
+                                                                    <action selector="topLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1N-Fm-2h6"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-zA-INz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -121,23 +121,23 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-cP-30D">
                                                         <rect key="frame" x="200" y="0.0" width="190" height="190"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-pr-c2B">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-RY-EPx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                                <connections>
-                                                                    <action selector="topRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYD-W9-sD8"/>
-                                                                </connections>
-                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-eO-rh4">
                                                                 <rect key="frame" x="45" y="45" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="100" id="MQR-OQ-prk"/>
                                                                     <constraint firstAttribute="height" constant="100" id="xNT-hE-pAL"/>
                                                                 </constraints>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-RY-EPx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="topRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4H-ex-qEs"/>
+                                                                </connections>
+                                                            </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-pr-c2B">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -163,9 +163,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehg-Hw-pO6">
                                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-qu-o36">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-TO-aHb">
                                                                 <rect key="frame" x="45" y="44.999999999999943" width="100" height="100"/>
                                                                 <constraints>
@@ -178,9 +175,12 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                                 <connections>
-                                                                    <action selector="bottomLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEh-pp-2m0"/>
+                                                                    <action selector="bottomLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEn-u3-pop"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-qu-o36">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -199,9 +199,6 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-me-mT9">
                                                         <rect key="frame" x="200" y="0.0" width="190" height="190"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-fF-k12">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-Uc-fHt">
                                                                 <rect key="frame" x="45" y="44.999999999999943" width="100" height="100"/>
                                                                 <constraints>
@@ -214,9 +211,12 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                                 <connections>
-                                                                    <action selector="bottomRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mJ-Hb-c0H"/>
+                                                                    <action selector="bottomRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1Y-yk-RJO"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-fF-k12">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -431,12 +431,21 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bottomLeftImageView" destination="hDP-qu-o36" id="ahj-fB-5QZ"/>
                         <outlet property="bottomLeftView" destination="Ehg-Hw-pO6" id="lRU-YO-uJS"/>
+                        <outlet property="bottomRightImageView" destination="bGX-fF-k12" id="FQX-4Z-651"/>
                         <outlet property="bottomRightView" destination="5Va-me-mT9" id="XIj-aZ-L0n"/>
+                        <outlet property="imagesContainerView" destination="l7Y-DE-Fnr" id="fNc-gd-huf"/>
+                        <outlet property="plusBottomLeft" destination="BYQ-TO-aHb" id="b3o-Fh-L7g"/>
+                        <outlet property="plusBottomRight" destination="DeH-Uc-fHt" id="0sP-BX-AAI"/>
+                        <outlet property="plusTopLeft" destination="QWJ-tx-gn2" id="WY6-ee-SFa"/>
+                        <outlet property="plusTopRight" destination="J1y-eO-rh4" id="hQg-xn-G6b"/>
                         <outlet property="select1" destination="BdE-43-dty" id="qoC-UK-11J"/>
                         <outlet property="select2" destination="qz1-LK-17Z" id="kuh-Sq-zeN"/>
                         <outlet property="select3" destination="0av-wD-uxf" id="DpC-91-MTN"/>
+                        <outlet property="topLeftImageView" destination="zqM-zA-INz" id="ohb-7m-gF6"/>
                         <outlet property="topLeftView" destination="o3c-4w-vzv" id="vmH-Tq-VAM"/>
+                        <outlet property="topRightImageView" destination="Ohb-pr-c2B" id="yVm-jC-uRg"/>
                         <outlet property="topRightView" destination="aLk-cP-30D" id="p77-vt-BIO"/>
                         <outletCollection property="layoutButtons" destination="UFo-JH-cNW" collectionClass="NSMutableArray" id="Mkv-3g-tZb"/>
                         <outletCollection property="layoutButtons" destination="sfU-Va-0Cl" collectionClass="NSMutableArray" id="euc-xw-Wge"/>
