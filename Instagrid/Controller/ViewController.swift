@@ -39,14 +39,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var plusBottomLeft: UIImageView!
     @IBOutlet weak var plusBottomRight: UIImageView!
     
-    private var currentRadians: CGFloat = 0.0
-    
+   // private var currentRadians: CGFloat = 0.0
+    let portraitTransform = CGAffineTransform(rotationAngle: 0)  // 0 degrees
+    let landscapeTransform = CGAffineTransform(rotationAngle: .pi * 1.5)  // 270 degrees
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let radians = 270 / 180.0 * CGFloat.pi
-        let rotation = CGAffineTransformRotate(self.arrowImageView.transform, radians)
-        self.arrowImageView.transform = rotation
         
         // Configuration de l'imagePicker
         imagePicker.delegate = self
@@ -103,22 +102,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         rotateArrowImageView(for: orientation)
     }
     
-    // Trouver une manière plus facile de gérer la rotation
-    
     private func rotateArrowImageView(for orientation: UIDeviceOrientation) {
-        let computedRadians = atan2f(Float(arrowImageView.transform.b), Float(arrowImageView.transform.a))
-        let currentAngle = computedRadians * (180 / Float(CGFloat.pi))
+            if orientation.isLandscape {
+                arrowImageView.transform = landscapeTransform
                 
-        let arrowImageViewIsRotated = currentAngle == -90
-                
-        if arrowImageViewIsRotated && orientation.isLandscape { return }
-
-        let angle: CGFloat = orientation.isLandscape ? 270 : 90
-        let radians = angle / 180.0 * CGFloat.pi
-        let rotation = CGAffineTransformRotate(self.arrowImageView.transform, radians)
-                
-        self.arrowImageView.transform = rotation
-    }
+            } else {
+                      arrowImageView.transform = portraitTransform
+                  }
+              }
+    
     
     @objc func handleSwipeGesture(_ sender: UISwipeGestureRecognizer) {
         print("Swipe detected")
