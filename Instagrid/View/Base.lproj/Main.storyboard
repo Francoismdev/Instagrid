@@ -29,49 +29,23 @@
                                     <constraint firstAttribute="width" constant="160" id="tnd-pq-fgB"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="lnZ-3X-HQP">
-                                <rect key="frame" x="5" y="213.66666666666666" width="420" height="49.999999999999972"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lnZ-3X-HQP">
+                                <rect key="frame" x="141" y="213" width="148" height="50.666666666666686"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="XcH-fr-HtR">
-                                        <rect key="frame" x="200" y="0.0" width="20" height="16"/>
+                                        <rect key="frame" x="64" y="0.0" width="20" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="DT1-ub-61u"/>
                                             <constraint firstAttribute="height" constant="16" id="FUc-Eb-wCD"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="Uip-qB-7TW">
-                                        <rect key="frame" x="64" y="0.0" width="20" height="16"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="16" id="88e-Zu-NQb"/>
-                                            <constraint firstAttribute="width" constant="20" id="jTu-7v-wCn"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bY-Ln-pD0">
-                                        <rect key="frame" x="136" y="17" width="148" height="33"/>
+                                        <rect key="frame" x="0.0" y="24" width="148" height="26.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="jbb-vF-tKe"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="XcH-fr-HtR"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="Uip-qB-7TW"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="XcH-fr-HtR"/>
-                                        <exclude reference="Uip-qB-7TW"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7Y-DE-Fnr">
                                 <rect key="frame" x="10" y="273.66666666666669" width="410" height="410.00000000000006"/>
@@ -320,7 +294,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDv-9K-YrQ">
-                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="96.666666666666671"/>
+                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="96.666666666666657"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="7WW-K2-wFs">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
@@ -427,14 +401,15 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Edy-1n-Uix"/>
+                                <exclude reference="b5M-Yh-qJb"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="arrowImageView" destination="XcH-fr-HtR" id="iXd-Qf-RQS"/>
                         <outlet property="bottomLeftImageView" destination="hDP-qu-o36" id="ahj-fB-5QZ"/>
                         <outlet property="bottomLeftView" destination="Ehg-Hw-pO6" id="lRU-YO-uJS"/>
                         <outlet property="bottomRightImageView" destination="bGX-fF-k12" id="FQX-4Z-651"/>
-                        <outlet property="bottomRightView" destination="5Va-me-mT9" id="XIj-aZ-L0n"/>
                         <outlet property="imagesContainerView" destination="l7Y-DE-Fnr" id="fNc-gd-huf"/>
                         <outlet property="plusBottomLeft" destination="BYQ-TO-aHb" id="b3o-Fh-L7g"/>
                         <outlet property="plusBottomRight" destination="DeH-Uc-fHt" id="0sP-BX-AAI"/>
@@ -446,7 +421,6 @@
                         <outlet property="topLeftImageView" destination="zqM-zA-INz" id="ohb-7m-gF6"/>
                         <outlet property="topLeftView" destination="o3c-4w-vzv" id="vmH-Tq-VAM"/>
                         <outlet property="topRightImageView" destination="Ohb-pr-c2B" id="yVm-jC-uRg"/>
-                        <outlet property="topRightView" destination="aLk-cP-30D" id="p77-vt-BIO"/>
                         <outletCollection property="layoutButtons" destination="UFo-JH-cNW" collectionClass="NSMutableArray" id="Mkv-3g-tZb"/>
                         <outletCollection property="layoutButtons" destination="sfU-Va-0Cl" collectionClass="NSMutableArray" id="euc-xw-Wge"/>
                         <outletCollection property="layoutButtons" destination="4D2-mE-saJ" collectionClass="NSMutableArray" id="LHv-6h-iw2"/>
@@ -454,11 +428,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1735.8139534883721" y="159.65665236051504"/>
+            <point key="canvasLocation" x="-2056" y="255"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
         <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Instagrid" width="41.333332061767578" height="13"/>
         <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>

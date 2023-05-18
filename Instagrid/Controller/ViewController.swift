@@ -13,15 +13,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var selectedButton: UIButton?
     var selectedImageView: UIImageView?
     var swipeGestureRecognizer: UISwipeGestureRecognizer!
-        
+    
+    @IBOutlet weak var arrowImageView: UIImageView!
     
     // How to open photo gallery iPhone swift UIImagePickerController
     // let pickerController = UIImagePickerController()
     @IBOutlet weak var topLeftView: UIView!
-    @IBOutlet weak var topRightView: UIView!
     @IBOutlet weak var bottomLeftView: UIView!
-    @IBOutlet weak var bottomRightView: UIView!
-    
     
     @IBOutlet var layoutButtons: [UIButton]!
     @IBOutlet weak var select1: UIImageView!
@@ -41,8 +39,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var plusBottomLeft: UIImageView!
     @IBOutlet weak var plusBottomRight: UIImageView!
     
+    private var currentRadians: CGFloat = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let radians = 270 / 180.0 * CGFloat.pi
+        let rotation = CGAffineTransformRotate(self.arrowImageView.transform, radians)
+        self.arrowImageView.transform = rotation
         
         // Configuration de l'imagePicker
         imagePicker.delegate = self
@@ -55,9 +59,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomRightImageView.contentMode = .scaleAspectFill
         
         // Appeler la fonction button2IsPressed pour configurer la vue
-           button2IsPressed(self)
-                
-               
+        button2IsPressed(self)
+        
+        
         
         // Méthode 1 : for ... in
         for button in layoutButtons {
@@ -78,34 +82,59 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
         swipeGestureRecognizer.direction = .up
         view.addGestureRecognizer(swipeGestureRecognizer)
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     @objc func orientationChanged() {
         let orientation = UIDevice.current.orientation
-        if orientation.isLandscape {
+        let isLandscape = orientation.isLandscape
+        
+        // Déclarer l'IBOutlet du UILabel "Swipe up to share" pour changer le text
+        
+        if isLandscape {
+            // leLabel.text = "Swipe left to share"
             swipeGestureRecognizer.direction = .left
         } else {
+            // leLabel.text = "Swipe up to share"
             swipeGestureRecognizer.direction = .up
         }
+        
+        rotateArrowImageView(for: orientation)
+    }
+    
+    // Trouver une manière plus facile de gérer la rotation
+    
+    private func rotateArrowImageView(for orientation: UIDeviceOrientation) {
+        let computedRadians = atan2f(Float(arrowImageView.transform.b), Float(arrowImageView.transform.a))
+        let currentAngle = computedRadians * (180 / Float(CGFloat.pi))
+                
+        let arrowImageViewIsRotated = currentAngle == -90
+                
+        if arrowImageViewIsRotated && orientation.isLandscape { return }
+
+        let angle: CGFloat = orientation.isLandscape ? 270 : 90
+        let radians = angle / 180.0 * CGFloat.pi
+        let rotation = CGAffineTransformRotate(self.arrowImageView.transform, radians)
+                
+        self.arrowImageView.transform = rotation
     }
     
     @objc func handleSwipeGesture(_ sender: UISwipeGestureRecognizer) {
         print("Swipe detected")
-       
+        
+        
         let renderer = UIGraphicsImageRenderer(size: imagesContainerView.bounds.size)
-        let image = renderer.image { ctx in
-            imagesContainerView.drawHierarchy(in: imagesContainerView.bounds, afterScreenUpdates: true)
+        let image = renderer.image { ctx in imagesContainerView.drawHierarchy(in: imagesContainerView.bounds, afterScreenUpdates: true)
         }
-
+        
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         present(activityViewController, animated: true, completion: nil)
     }
-
-      
-
+    
+    
+    
     
     @IBAction func layoutButtonIsPressed(_ sender: UIButton) {
         print("button.tag: \(sender.tag)")
@@ -146,7 +175,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-   
+    
     @IBAction func bottomRightImage(_ sender: UIButton) {
         print("image bas droite ou millieu IsPressed")
         selectedImageView = bottomRightImageView
@@ -157,7 +186,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         print("image bas gauche IsPressed")
         selectedImageView = bottomLeftImageView
         present(imagePicker, animated: true, completion: nil)
-       
+        
     }
     
     @IBAction func topRightImage(_ sender: UIButton) {
@@ -172,8 +201,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
     }
     
-   
-        
+    
+    
     func imagePickerController(_ picker:UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage =  info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             selectedImageView?.image = pickedImage
@@ -183,7 +212,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    }
+}
 
     
 
