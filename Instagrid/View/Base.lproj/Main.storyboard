@@ -69,7 +69,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-oA-A2N">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title=""/>
                                                                 <connections>
                                                                     <action selector="topLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1N-Fm-2h6"/>
                                                                 </connections>
@@ -105,7 +105,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-RY-EPx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
                                                                     <action selector="topRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4H-ex-qEs"/>
                                                                 </connections>
@@ -147,7 +147,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-6i-MrP">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
                                                                     <action selector="bottomLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEn-u3-pop"/>
                                                                 </connections>
@@ -183,7 +183,7 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o47-3p-GUg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
                                                                     <action selector="bottomRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1Y-yk-RJO"/>
                                                                 </connections>
@@ -294,7 +294,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cDv-9K-YrQ">
-                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="96.666666666666657"/>
+                                        <rect key="frame" x="293.33333333333331" y="0.0" width="96.666666666666686" height="96.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 3" translatesAutoresizingMaskIntoConstraints="NO" id="7WW-K2-wFs">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
@@ -418,6 +418,7 @@
                         <outlet property="select1" destination="BdE-43-dty" id="qoC-UK-11J"/>
                         <outlet property="select2" destination="qz1-LK-17Z" id="kuh-Sq-zeN"/>
                         <outlet property="select3" destination="0av-wD-uxf" id="DpC-91-MTN"/>
+                        <outlet property="swipeLabel" destination="9bY-Ln-pD0" id="k0L-T9-8fG"/>
                         <outlet property="topLeftImageView" destination="zqM-zA-INz" id="ohb-7m-gF6"/>
                         <outlet property="topLeftView" destination="o3c-4w-vzv" id="vmH-Tq-VAM"/>
                         <outlet property="topRightImageView" destination="Ohb-pr-c2B" id="yVm-jC-uRg"/>

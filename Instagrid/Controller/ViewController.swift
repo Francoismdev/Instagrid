@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var swipeGestureRecognizer: UISwipeGestureRecognizer!
     
     @IBOutlet weak var arrowImageView: UIImageView!
+    @IBOutlet weak var swipeLabel: UILabel!
     
     // How to open photo gallery iPhone swift UIImagePickerController
     // let pickerController = UIImagePickerController()
@@ -46,7 +47,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         // Configuration de l'imagePicker
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
@@ -61,21 +61,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         button2IsPressed(self)
         
         
-        
         // Méthode 1 : for ... in
         for button in layoutButtons {
             button.setTitle("", for: .normal)
         }
         
-        // Méthode 2 : forEach
-        layoutButtons.forEach { button in
-            button.setTitle("", for: .normal)
-        }
-        
-        // Méthode 3 : forEach avec l'utilisation de l'opérateur $0
-        layoutButtons.forEach { $0.setTitle("", for: .normal) }
-        
-        // [1, 2, 3].forEach { print($0) }
+       
         
         
         swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture(_:)))
@@ -83,24 +74,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         view.addGestureRecognizer(swipeGestureRecognizer)
         
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
+        
     }
     
     @objc func orientationChanged() {
         let orientation = UIDevice.current.orientation
         let isLandscape = orientation.isLandscape
         
-        // Déclarer l'IBOutlet du UILabel "Swipe up to share" pour changer le text
-        
         if isLandscape {
-            // leLabel.text = "Swipe left to share"
+            swipeLabel.text = "Swipe left to share" // Ajouter cette ligne
             swipeGestureRecognizer.direction = .left
         } else {
-            // leLabel.text = "Swipe up to share"
+            swipeLabel.text = "Swipe up to share" // Ajouter cette ligne
             swipeGestureRecognizer.direction = .up
         }
         
         rotateArrowImageView(for: orientation)
     }
+
     
     private func rotateArrowImageView(for orientation: UIDeviceOrientation) {
             if orientation.isLandscape {
@@ -115,15 +106,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @objc func handleSwipeGesture(_ sender: UISwipeGestureRecognizer) {
         print("Swipe detected")
         
-        
         let renderer = UIGraphicsImageRenderer(size: imagesContainerView.bounds.size)
         let image = renderer.image { ctx in imagesContainerView.drawHierarchy(in: imagesContainerView.bounds, afterScreenUpdates: true)
         }
         
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
-        present(activityViewController, animated: true, completion: nil)
+        
+        let orientation = UIDevice.current.orientation
+        let isLandscape = orientation.isLandscape
+        
+        // Sauvegarder la position originale de la vue
+        let originalPosition = imagesContainerView.center
+        
+        // Définir la translation nécessaire pour faire disparaître la vue de l'écran
+        let offScreenTransform: CGAffineTransform = isLandscape ?
+            CGAffineTransform(translationX: -view.bounds.width, y: 0) :
+            CGAffineTransform(translationX: 0, y: -view.bounds.height)
+        
+        // Animer la vue pour qu'elle glisse hors de l'écran
+        UIView.animate(withDuration: 0.5, animations: {
+            self.imagesContainerView.transform = offScreenTransform
+        }) { (completed) in
+            // Présenter le UIActivityViewController après la fin de l'animation.
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+
+        activityViewController.completionWithItemsHandler = { activity, completed, items, error in
+            // Animer la vue pour qu'elle revienne à sa place d'origine
+            UIView.animate(withDuration: 0.5, animations: {
+                self.imagesContainerView.transform = .identity
+                self.imagesContainerView.center = originalPosition
+            })
+        }
     }
+
+
     
     
     
