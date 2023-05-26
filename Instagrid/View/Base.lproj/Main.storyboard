@@ -60,23 +60,22 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="QWJ-tx-gn2">
-                                                                <rect key="frame" x="45" y="45" width="100" height="100"/>
+                                                                <rect key="frame" x="61.666666666666664" y="61.666666666666622" width="66.666666666666686" height="66.333333333333314"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="f6z-ed-EKe"/>
-                                                                    <constraint firstAttribute="width" constant="100" id="sXf-yE-P7k"/>
+                                                                    <constraint firstAttribute="width" secondItem="QWJ-tx-gn2" secondAttribute="height" id="ulP-o4-o23"/>
                                                                 </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-zA-INz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvf-oA-A2N">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title=""/>
                                                                 <connections>
-                                                                    <action selector="topLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i1N-Fm-2h6"/>
+                                                                    <action selector="imageViewHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="etJ-yz-Yyy"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-zA-INz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -84,6 +83,7 @@
                                                             <constraint firstItem="zqM-zA-INz" firstAttribute="leading" secondItem="o3c-4w-vzv" secondAttribute="leading" id="Avk-Iu-rkQ"/>
                                                             <constraint firstItem="QWJ-tx-gn2" firstAttribute="centerY" secondItem="o3c-4w-vzv" secondAttribute="centerY" id="Ggr-zi-wlM"/>
                                                             <constraint firstAttribute="bottom" secondItem="hvf-oA-A2N" secondAttribute="bottom" id="b9O-pY-lVM"/>
+                                                            <constraint firstItem="QWJ-tx-gn2" firstAttribute="height" secondItem="o3c-4w-vzv" secondAttribute="height" multiplier="0.35" id="bur-X2-sne"/>
                                                             <constraint firstItem="hvf-oA-A2N" firstAttribute="leading" secondItem="o3c-4w-vzv" secondAttribute="leading" id="dEg-UC-zJa"/>
                                                             <constraint firstItem="hvf-oA-A2N" firstAttribute="top" secondItem="o3c-4w-vzv" secondAttribute="top" id="eW4-dT-Usj"/>
                                                             <constraint firstItem="QWJ-tx-gn2" firstAttribute="centerX" secondItem="o3c-4w-vzv" secondAttribute="centerX" id="fbb-LG-4sp"/>
@@ -96,23 +96,22 @@
                                                         <rect key="frame" x="200" y="0.0" width="190" height="190"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-eO-rh4">
-                                                                <rect key="frame" x="45" y="45" width="100" height="100"/>
+                                                                <rect key="frame" x="61.666666666666693" y="61.666666666666622" width="66.666666666666686" height="66.333333333333314"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="MQR-OQ-prk"/>
-                                                                    <constraint firstAttribute="height" constant="100" id="xNT-hE-pAL"/>
+                                                                    <constraint firstAttribute="width" secondItem="J1y-eO-rh4" secondAttribute="height" multiplier="1:1" id="eW5-dc-iat"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-RY-EPx">
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-pr-c2B">
+                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-RY-EPx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
-                                                                    <action selector="topRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z4H-ex-qEs"/>
+                                                                    <action selector="imageViewHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w5i-j8-FEY"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-pr-c2B">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -130,31 +129,33 @@
                                                     </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="J1y-eO-rh4" firstAttribute="height" secondItem="QWJ-tx-gn2" secondAttribute="height" id="Gc8-PU-eg2"/>
+                                                </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x9i-5Z-tPJ">
                                                 <rect key="frame" x="0.0" y="200" width="390" height="190"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehg-Hw-pO6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehg-Hw-pO6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="190"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="BYQ-TO-aHb">
-                                                                <rect key="frame" x="45" y="44.999999999999943" width="100" height="100"/>
+                                                                <rect key="frame" x="-33.333333333333336" y="61.666666666666679" width="66.666666666666671" height="66.333333333333314"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="100" id="9cu-5f-xcB"/>
-                                                                    <constraint firstAttribute="height" constant="100" id="dPU-9k-peI"/>
+                                                                    <constraint firstAttribute="width" secondItem="BYQ-TO-aHb" secondAttribute="height" multiplier="1:1" id="zkA-to-5AE"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-6i-MrP">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-qu-o36">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="190"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEJ-6i-MrP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="190"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
-                                                                    <action selector="bottomLeftImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEn-u3-pop"/>
+                                                                    <action selector="imageViewHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8iR-N7-t1F"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hDP-qu-o36">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -171,26 +172,25 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Va-me-mT9">
-                                                        <rect key="frame" x="200" y="0.0" width="190" height="190"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="DeH-Uc-fHt">
-                                                                <rect key="frame" x="45" y="44.999999999999943" width="100" height="100"/>
+                                                                <rect key="frame" x="161.66666666666666" y="61.666666666666679" width="66.666666666666657" height="66.333333333333314"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="Pcs-Rh-CQ0"/>
-                                                                    <constraint firstAttribute="width" constant="100" id="eZQ-fJ-FLD"/>
+                                                                    <constraint firstAttribute="width" secondItem="DeH-Uc-fHt" secondAttribute="height" multiplier="1:1" id="Lkk-7e-v9F"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o47-3p-GUg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-fF-k12">
+                                                                <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
+                                                            </imageView>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o47-3p-GUg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="390" height="190"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                                 <connections>
-                                                                    <action selector="bottomRightImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1Y-yk-RJO"/>
+                                                                    <action selector="imageViewHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lcz-w3-OZa"/>
                                                                 </connections>
                                                             </button>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-fF-k12">
-                                                                <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
-                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
@@ -210,6 +210,10 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DeH-Uc-fHt" firstAttribute="height" secondItem="QWJ-tx-gn2" secondAttribute="height" id="2Ix-iX-NjX"/>
+                                            <constraint firstItem="BYQ-TO-aHb" firstAttribute="height" secondItem="QWJ-tx-gn2" secondAttribute="height" id="XYe-oJ-htZ"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.078431372550000003" green="0.39215683940000001" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -230,7 +234,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 1" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-3N-dri">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-43-dty">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-43-dty">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFo-JH-cNW">
@@ -238,8 +242,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="button1IsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LEp-yB-Ee8"/>
-                                                    <action selector="layoutButtonIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SSU-Ro-W26"/>
+                                                    <action selector="layoutButtonHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xc-YN-4Ut"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -265,7 +268,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Layout 2" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-YB-iKO">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
                                             </imageView>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="qz1-LK-17Z">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="qz1-LK-17Z">
                                                 <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="96.666666666666671"/>
                                             </imageView>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfU-Va-0Cl">
@@ -273,8 +276,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="button2IsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="db9-lq-9LU"/>
-                                                    <action selector="layoutButtonIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mH3-ve-oH2"/>
+                                                    <action selector="layoutButtonHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYS-P1-nnX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -307,8 +309,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
                                                 <connections>
-                                                    <action selector="button3IsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3YI-jq-uoS"/>
-                                                    <action selector="layoutButtonIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kre-aP-Iq2"/>
+                                                    <action selector="layoutButtonHasBeenTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TB8-ks-wqL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -407,29 +408,29 @@
                     </view>
                     <connections>
                         <outlet property="arrowImageView" destination="XcH-fr-HtR" id="iXd-Qf-RQS"/>
-                        <outlet property="bottomLeftImageView" destination="hDP-qu-o36" id="ahj-fB-5QZ"/>
                         <outlet property="bottomLeftView" destination="Ehg-Hw-pO6" id="lRU-YO-uJS"/>
-                        <outlet property="bottomRightImageView" destination="bGX-fF-k12" id="FQX-4Z-651"/>
-                        <outlet property="imagesContainerView" destination="l7Y-DE-Fnr" id="fNc-gd-huf"/>
-                        <outlet property="plusBottomLeft" destination="BYQ-TO-aHb" id="b3o-Fh-L7g"/>
-                        <outlet property="plusBottomRight" destination="DeH-Uc-fHt" id="0sP-BX-AAI"/>
-                        <outlet property="plusTopLeft" destination="QWJ-tx-gn2" id="WY6-ee-SFa"/>
-                        <outlet property="plusTopRight" destination="J1y-eO-rh4" id="hQg-xn-G6b"/>
-                        <outlet property="select1" destination="BdE-43-dty" id="qoC-UK-11J"/>
-                        <outlet property="select2" destination="qz1-LK-17Z" id="kuh-Sq-zeN"/>
-                        <outlet property="select3" destination="0av-wD-uxf" id="DpC-91-MTN"/>
+                        <outlet property="gridView" destination="l7Y-DE-Fnr" id="BQT-dm-jBn"/>
                         <outlet property="swipeLabel" destination="9bY-Ln-pD0" id="k0L-T9-8fG"/>
-                        <outlet property="topLeftImageView" destination="zqM-zA-INz" id="ohb-7m-gF6"/>
                         <outlet property="topLeftView" destination="o3c-4w-vzv" id="vmH-Tq-VAM"/>
-                        <outlet property="topRightImageView" destination="Ohb-pr-c2B" id="yVm-jC-uRg"/>
                         <outletCollection property="layoutButtons" destination="UFo-JH-cNW" collectionClass="NSMutableArray" id="Mkv-3g-tZb"/>
                         <outletCollection property="layoutButtons" destination="sfU-Va-0Cl" collectionClass="NSMutableArray" id="euc-xw-Wge"/>
                         <outletCollection property="layoutButtons" destination="4D2-mE-saJ" collectionClass="NSMutableArray" id="LHv-6h-iw2"/>
+                        <outletCollection property="gridViewButtons" destination="hvf-oA-A2N" collectionClass="NSMutableArray" id="pKX-bz-KZ5"/>
+                        <outletCollection property="gridViewButtons" destination="ba1-RY-EPx" collectionClass="NSMutableArray" id="zt1-ym-w8H"/>
+                        <outletCollection property="gridViewButtons" destination="pEJ-6i-MrP" collectionClass="NSMutableArray" id="FC3-Ai-I6U"/>
+                        <outletCollection property="gridViewButtons" destination="o47-3p-GUg" collectionClass="NSMutableArray" id="UsG-Ac-e7b"/>
+                        <outletCollection property="gridViewImageViews" destination="zqM-zA-INz" collectionClass="NSMutableArray" id="06V-XR-AtU"/>
+                        <outletCollection property="gridViewImageViews" destination="Ohb-pr-c2B" collectionClass="NSMutableArray" id="seF-eE-3ne"/>
+                        <outletCollection property="gridViewImageViews" destination="hDP-qu-o36" collectionClass="NSMutableArray" id="PEG-GW-6yM"/>
+                        <outletCollection property="gridViewImageViews" destination="bGX-fF-k12" collectionClass="NSMutableArray" id="pW0-tv-KK8"/>
+                        <outletCollection property="selectLayoutImageViews" destination="BdE-43-dty" collectionClass="NSMutableArray" id="Q25-2M-YzF"/>
+                        <outletCollection property="selectLayoutImageViews" destination="qz1-LK-17Z" collectionClass="NSMutableArray" id="7ey-XK-Rgq"/>
+                        <outletCollection property="selectLayoutImageViews" destination="0av-wD-uxf" collectionClass="NSMutableArray" id="TOD-E8-Cu0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2056" y="255"/>
+            <point key="canvasLocation" x="-2357" y="200"/>
         </scene>
     </scenes>
     <resources>
