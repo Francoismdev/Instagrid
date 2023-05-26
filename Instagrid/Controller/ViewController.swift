@@ -11,18 +11,18 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     
-    @IBOutlet weak var arrowImageView: UIImageView! // The arrow that indicates the direction of sliding.
-    @IBOutlet weak var swipeLabel: UILabel! // The label that displays the sliding direction.
+    @IBOutlet weak var arrowImageView: UIImageView! 
+    @IBOutlet weak var swipeLabel: UILabel!
     
     // Views of the gridView
-    @IBOutlet weak var gridView: UIView! // The container that contains all the images in the grid.
+    @IBOutlet weak var gridView: UIView!
     @IBOutlet var gridViewImageViews: [UIImageView]!
     @IBOutlet var gridViewButtons: [UIButton]!
-    @IBOutlet weak var topLeftView: UIView! // The view at the top left of the grid.
-    @IBOutlet weak var bottomLeftView: UIView! // The view at the bottom left of the grid.
+    @IBOutlet weak var topLeftView: UIView!
+    @IBOutlet weak var bottomLeftView: UIView!
     
     // Views of the layoutView
-    @IBOutlet var layoutButtons: [UIButton]! // The buttons that allow you to choose the layout of the grid.
+    @IBOutlet var layoutButtons: [UIButton]!
     @IBOutlet var selectLayoutImageViews: [UIImageView]!
     
     // MARK: - Properties
